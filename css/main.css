@@ -19,14 +19,14 @@ a {
 
 /* HEADER */
 header {
- background-color: royalblue;
+ background-color: #f6f5f0;
+ border-bottom: 1px solid #c8c8c8;
 }
 
 header .inner {
   width: 1100px;
   height: 120px;
   margin: 0 auto;
-  background-color: orange;
   position: relative;
 }
 
@@ -37,12 +37,13 @@ header .logo {
   bottom: 0;
   left: 0;
   margin: auto 0;
-  /* 임시 삭제 */
-  display: none;
 }
 
 header .sub-menu {
-
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
 }
 header .sub-menu ul.menu {
   font-family: Arial, sans-serif;
@@ -74,7 +75,6 @@ header .sub-menu ul.menu li a:hover {
   color: #000;
 }
 header .sub-menu .search {
-  background-color: red;
   height: 34px;
   position: relative;
 }
@@ -102,5 +102,11 @@ header .sub-menu .search .material-icons {
   position: absolute;
   top: 0;
   bottom: 0;
+  right: 5px;
   margin: auto;
+  transition: .4s;
+}
+
+header .sub-menu .search.focused .material-icons {
+  opacity: 0;
 }
